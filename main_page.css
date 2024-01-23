@@ -1,0 +1,93 @@
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+
+
+body {font-family: fantasy;}
+
+
+header.main-page-header {    position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     z-index: 1030;
+     min-width: 320px;
+     max-width: 100vw;
+     background-color: #fff;
+     box-shadow: 0 1px rgba(0,0,0,.05);
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;}
+
+header.main-page-header nav.main-page-nav {    position: relative;
+     padding: 0;
+     box-sizing: border-box;}
+
+nav.main-page-nav div.main-page-div{display: flex;
+     width: 100%;
+     max-width: 1052px;
+     margin-right: auto;
+     margin-left: auto;
+     box-sizing: border-box;}
+
+div.main-page-div2 {display: flex!important;
+     align-items: center!important;
+     box-sizing: border-box;
+}
+div.main-page-div2 a.main-page-a{    display: -ms-flexbox;
+     display: flex;
+     -ms-flex-align: center;
+     align-items: center;
+     height: 100%;
+     color: #000;
+     padding-left: 1px;
+     margin-right: 16px;
+     background-color: transparent;}
+
+span.main-page-span{
+     border: 0;
+    color: transparent;
+    text-shadow: none;
+     display: inline-block;
+     vertical-align: top;
+     background: url(https://d33pksfia2a94m.cloudfront.net/assets/img/brand/logo.svg) no-repeat 0 0;
+}
+
+.main-page-div3 {  
+     display: flex;
+       align-items: center;
+     margin: 0;
+     height: 100%;
+     line-height: 100%;
+     text-align: center;
+ }
+ 
+.main-page-home{ 
+     font-family: fantasy;
+     color: #000!important;
+     display: flex;
+     -ms-flex-align: center;
+     align-items: center;
+     height: 100%;
+     position: relative;
+     cursor: pointer;
+     padding: 0 14px;}
+
+
+     
+
+.main-page-div4{
+     font-weight: 600;
+     height: 48px;
+     line-height: 100%;
+     text-align: center;}
+
+.main-page-sub{
+     padding: 0 14px;
+     font-weight: 500!important;
+    font-size: 17px;
+    line-height: 135%;
+    text-align: center;
+     position: relative;
+     display: flex;
+     align-items: center;
+     height: 100%;}
