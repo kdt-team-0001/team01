@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparen
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: "Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif; */
+    display: block;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+div {
+    display: block
+}
+
+a {
+    outline: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: auto;
+    /* position: relative; */
+    z-index: 1030;
+    width: 100%;
+    max-width: 100vw;
+    transform: translateY(0);
+}
+
+.header-custom{
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-custom a {
+    text-decoration: none;
+}
+
+.gnb{
+    position: fixed;
+    top: 0!important;
+    right: 0;
+    left: 0;
+    height: 60px;
+    z-index: 2;
+    /* -webkit-transform: translate3d(0,0,0); */
+    transform: translate3d(0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+/* .gnb-logo{
+    position: relative;
+    display: block;
+    width: 40px;
+} */
+
+.gnb-logo::before {
+    
+    content: "";
+    position: absolute;
+    background: url(https://d33pksfia2a94m.cloudfront.net/assets/img/postype/logo_black.svg) no-repeat center;
+    background-size: contain;
+}
+
+.container.flex-middle {
+    height: 60px;
+}
