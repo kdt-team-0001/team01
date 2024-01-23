@@ -1,0 +1,381 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 320px;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    font-family: "Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-theme-color: #007aff;
+    --tagify-dd-color-primary: rgb(53,149,246);
+    --tagify-dd-bg-color: white;
+    --img-height: 175px;
+    --img-skeleton: linear-gradient(#f0f0f0 var(--img-height), transparent 0);
+    --text-1-position: 0 190px;
+    --text-2-position: 0 215px;
+    --text-3-position: 0 240px;
+    --img-width: 100%;
+    --img-position: 0 0;
+    --text-height: 16px;
+    --text-skeleton: linear-gradient(#f0f0f0 var(--img-height), transparent 0);
+    --text-1-width: 100%;
+    --text-2-width: 70%;
+    --text-3-width: 100%;
+    --blur-width: 200px;
+    --blur-size: var(--blur-width) 270px;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+a, a:hover {
+    color: currentColor;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    background-color: transparent;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.store-header {
+    box-shadow: 0 1px rgba(0,0,0,.05);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    min-width: 320px;
+    max-width: 100vw;
+    background-color: #fff;
+    backface-visibility: hidden;
+    transition: transform .25s ease,-webkit-transform .25s ease;
+}
+
+.store-primary-nav {
+    position: relative;
+    padding: 0;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.store-primary-nav-container {
+    justify-content: flex-start;
+    padding-right: 26px;
+    padding-left: 26px;
+    height: 60px;
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1052px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.store-primary-nav-left {
+    align-items: center!important;
+    display: flex!important;
+}
+
+.store-logo-link {
+    padding-left: 1px;
+    margin-right: 16px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    color: #000;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.store-logo-image {
+    width: 107px;
+    height: 28px;
+    opacity: .85;
+    display: inline-block;
+    vertical-align: top;
+    background: url(https://d33pksfia2a94m.cloudfront.net/assets/img/brand/logo.svg) no-repeat 0 0;
+    background-size: 107px 56px;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    border: 0;
+}
+
+.store-primary-nav-left-items {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    line-height: 100%;
+    text-align: center;
+    align-items: center;
+    color: #000;
+    display: flex!important;
+    white-space: nowrap;
+}
+
+.store-primary-nav-left-item {
+    height: 48px;
+}
+
+.store-primary-nav-left-link {
+    font-weight: 500!important;
+    font-size: 17px;
+    line-height: 135%;
+    text-align: center;
+    color: rgba(0,0,0,.47) !important;
+    padding: 0 14px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.store-primary-nav-left-link.active {
+    color: #000!important;
+}
+
+
+
+.store-primary-nav-right {
+    margin: 0 -6px 0 12px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 100%;
+    order: 10;
+}
+
+.store-login {
+    border: none;
+    padding: 5px 11px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background .15s ease-in-out,border-color .15s ease-in-out;
+    color: #000;
+    background-color: #fff;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    font-size: 15px;
+    border-radius: 4px;
+    line-height: 1.5rem;
+    background: none;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.store-login:hover {
+    color: #3478ff;
+    background-color: #fff;
+}
+
+.store-join {
+    border: none;
+    padding: 5px 11px;
+    margin-left: 8px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background .15s ease-in-out,border-color .15s ease-in-out;
+    background: none;
+    color: #fff;
+    background-color: #3478ff;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    font-size: 15px;
+    border-radius: 4px;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.store-join:hover {
+    color: #fff;
+    background-color: #1e50ff;
+}
+
+.store-primary-nav-center {
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    justify-content: flex-end!important;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.store-search-form {
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.store-search-form-inner {
+    position: relative;
+    width: 100%;
+}
+
+.store-search-form-label {
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 0;
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.store-search-icon {
+    left: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: 3px;
+    line-height: 28px;
+    text-align: center;
+    color: #909090;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translate(0,-50%);
+}
+
+.store-search-icon .fa-search {
+    font-size: inherit;
+}
+
+.store-search-input {
+    width: 260px;
+    height: 40px;
+    padding: 0 48px 0 40.8px;
+    font-size: 14px;
+    background-color: #F0F0F0;
+    background-clip: border-box;
+    border-color: #F0F0F0;
+    border-radius: 10rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 26px;
+    color: inherit;
+    transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
+    border: none;
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+.store-search-input::placeholder {
+    color: #909090;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+input:focus-visible {
+    outline: none !important;
+}
+
