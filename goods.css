@@ -51,6 +51,14 @@
 }
 
 :root {
+    --img-height: 175px;
+    --img-skeleton: linear-gradient(#f0f0f0 var(--img-height), transparent 0);
+    --text-1-position: 0 190px;
+    --text-2-position: 0 215px;
+    --text-3-position: 0 240px;
+}
+
+:root {
     --tagify-dd-color-primary: rgb(53,149,246);
     --tagify-dd-bg-color: white;
 }
@@ -185,20 +193,20 @@ header {
     top: 0!important;
     right: 0;
     left: 0;
+    height: 60px;
     z-index: 2;
-    -ms-transform: translate3d(0,0,0);
+    /* -ms-transform: translate3d(0,0,0); */
     /* -webkit-transform: translate3d(0,0,0); */
     transform: translate3d(0,0,0);
 }
 
-.gnb, .gnb .container {
-    height: 56px;
-}
 
 .header-custom .gnb {
     background-color: inherit;
     border-bottom: 1px solid rgba(0,0,0,.05);
 }
+
+
 
 .header-custom a {
     text-decoration: none;
@@ -226,7 +234,7 @@ header {
 }
 
 .flex, [class*="flex-"]:not([class*="d-md-flex"]), .action-group {
-    /* display: -ms-flexbox; */
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -234,31 +242,44 @@ header {
     -ms-flex-align: center;
     align-items: center;
 }
-/* 위의 대괄호 안에 있는 부분은 확인 필요 */
+
+.header .action-group:last-child {
+    margin-right: 0;
+}
+
 
 .header .container {
     position: relative;
+
 }
 
 .gnb .container, .navbar .container {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 .gnb .container {
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .gnb, .gnb .container {
-    height: 56px;
+    height: 60px;
 }
+
 
 a:-webkit-any-link {
     color: -webkit-link;  
     /* 해당 컬러를 웹 키트를 가져온다는 건지 확인 필요 */
     cursor: pointer;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
 }
 
 .btn-icon {
@@ -271,15 +292,22 @@ a:-webkit-any-link {
 
 .blog [class*="btn-icon"] {
     width: auto;
-    min-width: 36px;
-    height: 36px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    min-width: 40px;
+    height: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border-radius: 25rem;
 }
 
+.gnb-brand-wrap {
+    -ms-flex: 1;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
 .blog .btn-icon {
-    width: 36px;
+    width: 40px;
     padding: 5px;
 }
 
@@ -293,9 +321,9 @@ a:-webkit-any-link {
 .gnb-logo::before, .gnb-logo::after {
     content: "";
     position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 3px;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
 }
 
 .gnb-logo::before {
@@ -308,24 +336,27 @@ a:-webkit-any-link {
     -ms-flex: 1;
     flex: 1;
     height: 100%;
-    margin-left: -6px;
+    margin-left: -4px;
     text-align: center;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 56px;
+    font-size: 20px;
+    line-height: 60px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 512px;
 }
+
 
 .gnb-brand::before {
     content: "";
     position: absolute;
-    top: calc(50% - 7px);
-    left: 12px;
-    height: 14px;
+    top: calc(50% - 9px);
+    left: 16px;
+    height: 18px;
     border-left: 1px solid;
 }
+
 
 .gnb-brand::before, .post-reaction .action-group .divider, .dark-mode .blog.header-bg-color:not(.invert-colors) .gnb-brand::before {
     border-color: rgba(0,0,0,.2);
@@ -338,7 +369,7 @@ a:-webkit-any-link {
 }
 
 .gnb-brand .gnb-title {
-    padding: 0 24px;
+    padding: 0 32px;
 }
 
 .btn {
@@ -864,9 +895,9 @@ img {
 }
 
 .post-header {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
     overflow-x: hidden;
     border-bottom: 1px solid;
     font-size: 16px;
@@ -952,12 +983,6 @@ img {
 .post-header .post-meta {
     margin-top: 20px;
 }
-
-.flex, [class*="flex-"]:not([class*="d-md-flex"]), .action-group {
-    display: -ms-flexbox;
-    display: flex;
-}
-
 [class*="flex-"][class*="-between"] {
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1153,11 +1178,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 3px;
 }
 
-.blog .btn-icon {
-    width: 40px;
-    padding: 7px;
-}
-
 .blog .btn-icon .fa-sign-out {
     position: relative;
     top: -1px;
@@ -1295,4 +1315,84 @@ div[class*="user-avatar"], img[class*="avatar"] {
     color: #000;
     word-break: break-all;
     white-space: pre-line;
+}
+
+.store-header .dropdown-item .option-stock, #expand-area .dropdown-item .option-stock {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0,0,0,.47);
+    margin-top: 2px;
+}
+
+#goods .header-responsive .select-wrapper {
+    margin-top: 65px;
+}
+
+.store-header .selected-list, #expand-area .selected-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#goods .header-responsive .store-header .total-summary {
+    padding-bottom: 0;
+}
+
+.store-header .total-summary, #expand-area .total-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-bottom: 36px;
+}
+
+#goods .header-summary .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding: 0;
+}
+
+#goods .header-summary .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -.22px;
+    color: #000;
+    padding: 12px 20px;
+}
+
+.store-header .total-summary .total-amount, #expand-area .total-summary .total-amount {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: -.15px;
+    color: #3478ff;
+}
+
+#goods .submit-wrapper {
+    padding-top: 20px;
+}
+
+#goods #desktop-submit-goods {
+    width: 100%;
+    height: 44px;
+    border: 1px solid;
+}
+
+.post-grid-view .post-item .article-status .badge-primary, .series-grid-view .series-item .article-status .badge-primary, .blog .switch-input:checked+.switch-indicator::before, .blog .btn-strong, .blog .is-support .point-label, .blog .custom-radio .custom-control-input:checked~.custom-control-label::before, .blog .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: rgba(0,0,0,1);
+    color: rgba(255,255,255,1)!important;
+}
+
+.blog .btn-default, .blog .btn-strong {
+    font-weight: 400;
+}
+
+.blog .btn {
+    padding: 5px 15px;
 }
