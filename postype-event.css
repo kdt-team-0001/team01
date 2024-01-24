@@ -597,6 +597,14 @@ input.write-keyword {
     position: relative;
 }
 
+.page-item .page-link {
+    color: #757575;
+}
+
+.page-link:hover{
+    border-color: currentColor;
+}
+
 .page-item.active .page-link {
     color: #3478ff;
     background-color: transparent;
