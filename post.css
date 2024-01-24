@@ -268,7 +268,7 @@ body {
     position: relative;
     align-items: center;
     display: flex;
-    argin-right: auto;
+    margin-right: auto;
     margin-left: auto;
     width: 100%;
 }
