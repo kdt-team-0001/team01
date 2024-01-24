@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 :root {
     --primary-color: #ffffff;
     --white-mode-primary-color: #000000;
@@ -90,7 +92,6 @@ a, a:hover {
 }
 
 a {
-    color: #007bff;
     text-decoration: none;
     background-color: transparent;
 }
@@ -151,6 +152,7 @@ button {
     min-height: 100vh;
 }
 
+/* 헤더 부분 */
 .header {
     transition: transform .25s ease;
     background-color: #fff;
@@ -403,6 +405,7 @@ button {
 }
 
 .header-body-custom-container {
+    height: 56px;
     padding-right: 16px;
     padding-left: 16px;
     position: relative;
@@ -449,7 +452,7 @@ button {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.navbar-left-btn-back-chevron {
+.fal.fa-chevron-left {
     margin: 0 1px 0 -1px;
     vertical-align: middle;
     font-size: 20px;
@@ -462,7 +465,7 @@ button {
     line-height: 1;
 }
 
-.navbar-left-btn-back-chevron::before {
+.fal.fa-chevron-left::before {
     content: "\f053";
 }
 
@@ -491,9 +494,9 @@ button {
 }
 
 .navbar-center-title> span {
+    font-weight: 500;
     font-size: 17px;
     line-height: 22px;
-    font-weight: 600;
 }
 
 .navbar-center-subtitle {
@@ -507,11 +510,13 @@ button {
 .navbar-center-title-btn-prev {
     color: #ccc;
     opacity: 1;
-    display: none;
-    width: 40px;
-    padding: 7px;
-    min-width: 40px;
-    height: 40px;
+    order: -1;
+    padding: 5px 7px 5px 3px;
+    display: inline-block;
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 25rem;
     position: relative;
     flex-shrink: 0;
     text-align: center;
@@ -519,8 +524,6 @@ button {
     line-height: 24px;
     background-color: transparent;
     border: 1px solid transparent;
-    cursor: default;
-    background: none;
     font-weight: 400;
     white-space: nowrap;
     vertical-align: middle;
@@ -528,16 +531,15 @@ button {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.center-title-btn-caret-left {
-    vertical-align: middle;
+.fas.fa-caret-left {
+    position: relative;
+    top: -1px;
     font-size: 20px;
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 900;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+    vertical-align: middle;
+}
+
+.fas.fa-caret-left::before {
+    content: "\f0d9";
 }
 
 .navbar-center-title-btn-next {
@@ -565,7 +567,7 @@ button {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.center-title-btn-caret-righ {
+.fas.fa-caret-right {
     position: relative;
     top: -1px;
     font-size: 20px;
@@ -577,6 +579,10 @@ button {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
+}
+
+.fas.fa-caret-right::before {
+    content: "\f0da";
 }
 
 .body-custom-navbar-right {
@@ -769,4 +775,273 @@ button {
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+}
+
+.right-dropdown-font-size-setting {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.right-dropdown-btn-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-dropdown-btn-minify {
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-left: 0!important;
+    display: inline-flex!important;
+    width: 32px!important;
+    height: 32px!important;
+    padding: 3px!important;
+    font-size: 14px!important;
+    line-height: 24px!important;
+    color: #555!important;
+    border-color: #ddd!important;
+    border-radius: 50%!important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.right-dropdown-divider {
+    display: inline-flex;
+    vertical-align: top;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+}
+
+.right-dropdown-font-icon {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+.right-dropdown-btn-enlarge {
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-left: 0!important;
+    display: inline-flex!important;
+    width: 32px!important;
+    height: 32px!important;
+    padding: 3px!important;
+    font-size: 14px!important;
+    line-height: 24px!important;
+    color: #555!important;
+    border-color: #ddd!important;
+    border-radius: 50%!important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.right-dropdown-btn-enlarge-plus {
+    display: inline-flex;
+    vertical-align: top;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+}
+.right-dropdown-divider {
+    border-color: rgba(0,0,0,.05);
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.right-dropdown-backgroun-setting-item {
+    padding: 6px 33px!important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    line-height: 24px;
+    color: #606060;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.right-dropdown-backgroun-setting {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.right-dropdown-backgroun-setting-divider {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.backgroun-setting-divider-btn-bg {
+    color: #3478ff!important;
+    border-color: currentColor!important;
+    box-shadow: 0 0 0 1px currentColor!important;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-left: 0!important;
+    display: inline-flex!important;
+    width: 32px!important;
+    height: 32px!important;
+    padding: 3px!important;
+    font-size: 14px!important;
+    line-height: 24px!important;
+    border-radius: 50%!important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.backgroun-setting-divider-btn-bg> span {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.backgroun-setting-divider-btn-black {
+    background-color: #202020;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    border: 1px solid transparent;
+    margin-left: 0!important;
+    display: inline-flex!important;
+    width: 32px!important;
+    height: 32px!important;
+    padding: 3px!important;
+    font-size: 14px!important;
+    line-height: 24px!important;
+    color: #555!important;
+    border-color: #ddd!important;
+    border-radius: 50%!important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.backgroun-setting-divider-btn-black> span {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.right-dropdown-backgroun-divider {
+    display: none;
+    border-color: rgba(0,0,0,.05);
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.navbar-right-episodes-toggle {
+    display: inline-block;
+    margin-left: 16px;
+    cursor: pointer;
+    color: #121212;
+    padding: 3px 12px;
+    font-weight: 400;
+    border: 1px solid;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: transparent;
+    border-radius: 4px;
+    background: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-color: rgba(0,0,0,.15);
+}
+
+/* 메인 부분 */
+.main {
+    transform: translateY(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    padding-bottom: 64px;
+    padding-top: 120px;
 }
